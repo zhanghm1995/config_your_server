@@ -10,4 +10,4 @@ echo "tmux version: $TMUX_VERSION"
 echo ""
 echo "We will copy the tmux config file to $HOME/.tmux.conf!!!"
 
-# cp src/.tmux.conf $HOME
+cp src/.tmux.conf $HOME
