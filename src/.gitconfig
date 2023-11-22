@@ -1,0 +1,20 @@
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    mt = mergetool
+[user]
+    email = zhanghm_1995@qq.com
+    name = Herman
+[merge]
+    tool = meld
+[core]
+    editor = vim
+[push]
+    default = simple
+
+[http]
+  sslVerify = false
+  postBuffer = 1048576000
+[https]
+  sslVerify = false

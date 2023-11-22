@@ -35,7 +35,7 @@ if ! command -v zsh &> /dev/null; then
 
     # Build and install zsh
     ./configure --prefix=$HOME/.zsh &&
-    make
+    make &&
     make install
 
     # Set zsh as the default shell
@@ -57,21 +57,6 @@ echo "src/antigen.zsh has been copied to $HOME/.antigen.zsh."
 echo "================= Start config the zsh... ================="
 echo
 
-# Copy .zshrc to $HOME/.zshrc
-cp src/.zshrc $HOME
-echo "src/.zshrc has been copied to $HOME/.zshrc."
-    
-    sudo apt-get update
-    sudo apt-get install -y zsh
-    
-    # Set zsh as the default shell
-    chsh -s $(which zsh)
-    
-    echo "zsh has been installed and set as the default shell."
-else
-    echo "zsh is already installed."
-fi
-
 # Copy antigen.zsh to $HOME/.antigen.zsh
 echo "================= Start config the antigen... ================="
 echo
@@ -86,3 +71,5 @@ echo
 cp src/.zshrc $HOME
 echo "src/.zshrc has been copied to $HOME/.zshrc."
 
+# execute zsh to start config
+zsh
