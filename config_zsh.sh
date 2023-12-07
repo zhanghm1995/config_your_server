@@ -25,6 +25,12 @@ if ! command -v zsh &> /dev/null; then
     ./configure --prefix=$NCURSES_HOME --with-shared --without-debug --enable-widec &&
     make && make install
 
+    echo $PATH
+
+    echo "Start install zsh..."
+    echo "Press any key to continue..."
+    read -n 1
+
     echo "Extracting zsh.tar.xz..."
     # Install zsh in non-root user
     # Extract zsh.tar.xz
@@ -46,16 +52,6 @@ if ! command -v zsh &> /dev/null; then
 else
     echo "zsh is already installed."
 fi
-
-# Copy antigen.zsh to $HOME/.antigen.zsh
-echo "================= Start config the antigen... ================="
-echo
-
-cp src/antigen.zsh $HOME/.antigen.zsh
-echo "src/antigen.zsh has been copied to $HOME/.antigen.zsh."
-
-echo "================= Start config the zsh... ================="
-echo
 
 # Copy antigen.zsh to $HOME/.antigen.zsh
 echo "================= Start config the antigen... ================="

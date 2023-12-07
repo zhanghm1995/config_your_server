@@ -2,4 +2,4 @@
 
 echo "================= Start config the git... ================="
 
-cp src/.gitconfig $HOME
+cp src/gitconfig $HOME/.gitconfig
