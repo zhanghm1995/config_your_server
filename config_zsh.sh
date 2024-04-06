@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# get current work directory
+WORK_DIR=`pwd`
+echo $WORK_DIR
+
 # Check if zsh is installed
 if ! command -v zsh &> /dev/null; then
     echo "zsh is not installed. Installing..."
@@ -25,11 +29,15 @@ if ! command -v zsh &> /dev/null; then
     ./configure --prefix=$NCURSES_HOME --with-shared --without-debug --enable-widec &&
     make && make install
 
+    echo "=============Existing PATH is==================="
     echo $PATH
 
     echo "Start install zsh..."
     echo "Press any key to continue..."
     read -n 1
+
+    ## Switch to the root directory
+    cd $WORK_DIR
 
     echo "Extracting zsh.tar.xz..."
     # Install zsh in non-root user
@@ -49,9 +57,14 @@ if ! command -v zsh &> /dev/null; then
     echo '[ -f $HOME/.zsh/bin/zsh ] && exec $HOME/.zsh/bin/zsh -l' >> ~/.bashrc
 
     echo "zsh has been installed and set as the default shell."
+
 else
     echo "zsh is already installed."
+    chsh -s $(which zsh)
 fi
+
+
+cd $WORK_DIR
 
 # Copy antigen.zsh to $HOME/.antigen.zsh
 echo "================= Start config the antigen... ================="
