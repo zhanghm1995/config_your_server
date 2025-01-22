@@ -81,4 +81,5 @@ cp src/.zshrc $HOME
 echo "src/.zshrc has been copied to $HOME/.zshrc."
 
 # execute zsh to start config
-zsh
+echo "====== Please start a new terminator to execute the zsh! =============="
+echo "Done!"

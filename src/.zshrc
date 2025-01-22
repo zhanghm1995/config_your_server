@@ -10,7 +10,7 @@ antigen bundle lein
 antigen bundle command-not-found
 # antigen bundle autojump
 # antigen bundle skywind3000/z.lua
-antigen bundle esc/conda-zsh-completion
+antigen bundle conda-incubator/conda-zsh-completion
 
 # # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -57,7 +57,7 @@ alias g='gpustat -i'
 alias n="nvidia-smi"
 alias wn="watch -n 0.5 nvidia-smi"
 
-alias cdd='cd /data/haiming'
+alias cdd='cd /data/zhanghm'
 ## -----------Alias----------------
 
 # for gcc and g++
